@@ -10,7 +10,6 @@ export default class Validator {
 
   static cleanPhoneNumber(phone) {
     const regclear = /[\s\-()]/g;
-    const regnumber = /\d{10}$/g;
     const cleanPhone = `${phone}`.replace(regclear, '').replace(/^8|\+7/g, '+7');
     return cleanPhone;
   }
