@@ -20,15 +20,3 @@ describe('validateUsername from Validator class: ', () => {
     expect(Validator.validateUsername('user_123-super-char')).toBeTruthy();
   });
 });
-
-describe('cleanPhoneNumber from Validator class: ', () => {
-  const cases = [
-    ['8 (927) 000-00-00', '+79270000000'],
-    ['+7 960 000 00 00', '+79600000000'],
-    ['+86 000 000 0000', '+860000000000'],
-  ];
-
-  test.each(cases)('method cleanPhoneNumber should transform number', (test, expected) => {
-    expect(Validator.cleanPhoneNumber(test)).toBe(expected);
-  });
-});

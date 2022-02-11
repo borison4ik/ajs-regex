@@ -7,10 +7,4 @@ export default class Validator {
     }
     return true;
   }
-
-  static cleanPhoneNumber(phone) {
-    const regclear = /[\s\-()]/g;
-    const cleanPhone = `${phone}`.replace(regclear, '').replace(/^8|\+7/g, '+7');
-    return cleanPhone;
-  }
 }
